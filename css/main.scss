@@ -1,0 +1,66 @@
+/* @use imports partials (files with _name is treated as partials)
+the filename without _ is used as namespace
+you can change namespace by using the as keyword, and the name of the new namespace
+
+
+*/
+@use "./abstracts/colors" as c; // userdefined namespace
+@use "./abstracts/fonts"; // namespace from file here: fonts
+@use "./components/myLocal";
+@use "./components/sections";
+@use "./abstracts/formElements";
+@use "./abstracts/logoStyles";
+@use "./components/media_query";
+
+@include fonts.mainFonts; // use of namespace to acces a mixin from the partial _fonts.scss
+
+//--------------------------------------------------------------------------------------------
+/* example of a mixin made inline defining the code in the mixin and using it in an include
+ inline mixin defined by @mixin,  can be used in the same document, without @use.
+*/
+
+@mixin defaultStyling {
+  width: 400px;
+  margin: auto;
+  background-color: c.$darkOrange;
+  font-family: "Overpass", sans-serif;
+}
+
+body {
+  @include defaultStyling; // including an inline mixin without namespacing
+}
+
+//---------------------------------------------------------------------------------------
+header {
+  background-color: c.$white; // using a variable from a partial, using custum namespace
+  padding-left: 5px;
+  padding-right: 25px;
+}
+
+.logoBox {
+  @include logoStyles.logoBox;
+}
+
+.local {
+  @include myLocal.localStyle; //including a mixin from a partial with namespace from file
+  // @include sections.blueHeavyTextSection;
+}
+
+.bikes {
+  @include sections.greyImageBox;
+}
+
+.signup {
+  @include sections.brightBlueSection;
+  @include formElements.formStyling;
+}
+
+.about {
+  @include media_query.bp(sm_screens) {
+    @include sections.orangeHeavyTextSection;
+  }
+
+  @include media_query.bp(wide_screens) {
+    @include sections.blueHeavyTextSection;
+  }
+}

@@ -1,0 +1,59 @@
+/*this is an example of multiple mixins in one partial controlling multiple sections of the site
+ use colors partial to get acces to the color variables in this partial
+*/
+@use "../abstracts/colors" as c;
+
+// mixin for bike section
+@mixin greyImageBox {
+  background-color: c.$coolGrey;
+  text-align: center;
+}
+
+//mixin for signup section
+@mixin brightBlueSection {
+  display: block;
+  background-color: c.$lightBlue;
+  color: c.$darkBlue;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 5px;
+  h1 {
+    font-family: "M PLUS Rounded 1c", sans-serif; //funtfamily from font import in a mixin at top of document
+    color: c.$coolGrey;
+  }
+}
+
+// mixin for about section
+@mixin orangeHeavyTextSection {
+  display: block;
+  background-color: c.$yellow; // using a variable from a partial, using custum namespace
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 5px;
+
+  h1 {
+    color: c.$darkOrange;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: bold;
+  }
+  p {
+    color: c.$darkBlue; // using a variable from a partial, using custum namespace
+  }
+}
+
+@mixin blueHeavyTextSection {
+  display: block;
+  background-color: c.$darkBlue; // using a variable from a partial, using custum namespace
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 5px;
+
+  h1 {
+    color: c.$darkOrange;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: bold;
+  }
+  p {
+    color: c.$coolGrey; // using a variable from a partial, using custum namespace
+  }
+}

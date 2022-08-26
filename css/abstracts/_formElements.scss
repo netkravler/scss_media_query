@@ -1,0 +1,17 @@
+/*this is an example of a partial with a mixin that styles form elements on the site
+ use colors partial to get acces to the color variables in this partial
+*/
+@use "./colors" as c;
+
+@mixin formStyling {
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: c.$darkBlue;
+  }
+
+  input {
+    display: block;
+    margin-bottom: 20px;
+  }
+}

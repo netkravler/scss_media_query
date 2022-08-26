@@ -1,0 +1,15 @@
+@mixin bp($point) {
+  $bp-small-screens: "screen and (max-width: 600px)"; /*BP breakpoint for small screen*/
+
+  $bp-widescreen: "screen and (min-width: 900px)"; /*BP breakpoint for wide screen*/
+
+  @if $point == sm_screens {
+    @media #{$bp-small-screens} {
+      @content;
+    }
+  } @else if $point == wide_screens {
+    @media #{$bp-widescreen} {
+      @content;
+    }
+  }
+}

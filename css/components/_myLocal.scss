@@ -1,0 +1,24 @@
+/*this is an example of one mixin in one partial controlling one section of the site
+ use colors partial to get acces to the color variables in this partial
+*/
+@use "../abstracts/colors";
+
+// fonts are importet by mixin in our main scss
+$headlineFont: "M PLUS Rounded 1c", sans-serif;
+
+@mixin localStyle {
+  display: block;
+  background-color: colors.$darkOrange;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 5px;
+  p {
+    color: #e2e1df;
+    font: weight 300px;
+  }
+  h1 {
+    font-family: $headlineFont;
+    color: #3c3a48;
+    font-weight: bold;
+  }
+}
