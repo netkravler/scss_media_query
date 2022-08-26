@@ -1,14 +1,32 @@
 @mixin bp($point) {
-  $bp-small-screens: "screen and (max-width: 600px)"; /*BP breakpoint for small screen*/
+  $bp-xsmall: "only screen and (max-width: 600px)"; /*BP breakpoint for extra small devices*/
 
-  $bp-widescreen: "screen and (min-width: 900px)"; /*BP breakpoint for wide screen*/
+  $bp-small: "only screen and (min-width: 600px)"; /*BP breakpoint for small devices*/
 
-  @if $point == sm_screens {
-    @media #{$bp-small-screens} {
+  $bp-medium: "only screen and (min-width: 768px)"; /*BP breakpoint for medium devices*/
+
+  $bp-large: "only screen and (min-width: 992px)"; /*BP breakpoint for large devices*/
+
+  $bp-xlarge: "only screen and (min-width: 1200px)"; /*BP breakpoint for extra large devices*/
+
+  @if $point == xsmall {
+    @media #{$bp-xsmall} {
       @content;
     }
-  } @else if $point == wide_screens {
-    @media #{$bp-widescreen} {
+  } @else if $point == small {
+    @media #{$bp-small} {
+      @content;
+    }
+  } @else if $point == medium {
+    @media #{$bp-medium} {
+      @content;
+    }
+  } @else if $point == large {
+    @media #{$bp-large} {
+      @content;
+    }
+  } @else if $point == xlarge {
+    @media #{$bp-xlarge} {
       @content;
     }
   }

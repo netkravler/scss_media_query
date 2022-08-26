@@ -12,7 +12,7 @@
 //mixin for signup section
 @mixin brightBlueSection {
   display: block;
-  background-color: c.$lightBlue;
+  background-color: c.$brightBlue;
   color: c.$darkBlue;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -55,5 +55,31 @@
   }
   p {
     color: c.$coolGrey; // using a variable from a partial, using custum namespace
+  }
+}
+
+@mixin brightGreenSection {
+  display: block;
+  background-color: c.$brightGreen;
+  color: c.$darkBlue;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 5px;
+  h1 {
+    font-family: "M PLUS Rounded 1c", sans-serif; //funtfamily from font import in a mixin at top of document
+    color: c.$coolGrey;
+  }
+}
+
+@mixin brightYellowSection {
+  display: block;
+  background-color: c.$brightYellow;
+  color: c.$darkBlue;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 5px;
+  h1 {
+    font-family: "M PLUS Rounded 1c", sans-serif; //funtfamily from font import in a mixin at top of document
+    color: c.$coolGrey;
   }
 }

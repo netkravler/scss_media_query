@@ -85,12 +85,33 @@ header {
 }
 
 .about {
-  /*BP breakpoint for small screen*/
-  /*BP breakpoint for wide screen*/
-  /*BP breakpoint for small screen*/
-  /*BP breakpoint for wide screen*/
+  /*BP breakpoint for extra small devices*/
+  /*BP breakpoint for small devices*/
+  /*BP breakpoint for medium devices*/
+  /*BP breakpoint for large devices*/
+  /*BP breakpoint for extra large devices*/
+  /*BP breakpoint for extra small devices*/
+  /*BP breakpoint for small devices*/
+  /*BP breakpoint for medium devices*/
+  /*BP breakpoint for large devices*/
+  /*BP breakpoint for extra large devices*/
+  /*BP breakpoint for extra small devices*/
+  /*BP breakpoint for small devices*/
+  /*BP breakpoint for medium devices*/
+  /*BP breakpoint for large devices*/
+  /*BP breakpoint for extra large devices*/
+  /*BP breakpoint for extra small devices*/
+  /*BP breakpoint for small devices*/
+  /*BP breakpoint for medium devices*/
+  /*BP breakpoint for large devices*/
+  /*BP breakpoint for extra large devices*/
+  /*BP breakpoint for extra small devices*/
+  /*BP breakpoint for small devices*/
+  /*BP breakpoint for medium devices*/
+  /*BP breakpoint for large devices*/
+  /*BP breakpoint for extra large devices*/
 }
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   .about {
     display: block;
     background-color: #eab244;
@@ -107,7 +128,7 @@ header {
     color: #0b354b;
   }
 }
-@media screen and (min-width: 900px) {
+@media only screen and (max-width: 600px) {
   .about {
     display: block;
     background-color: #0b354b;
@@ -121,6 +142,51 @@ header {
     font-weight: bold;
   }
   .about p {
+    color: #696c6d;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .about {
+    display: block;
+    background-color: #0b354b;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+  }
+  .about h1 {
+    color: #e64448;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: bold;
+  }
+  .about p {
+    color: #696c6d;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .about {
+    display: block;
+    background-color: rgb(46, 184, 57);
+    color: #0b354b;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+  }
+  .about h1 {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    color: #696c6d;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .about {
+    display: block;
+    background-color: rgb(244, 221, 108);
+    color: #0b354b;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+  }
+  .about h1 {
+    font-family: "M PLUS Rounded 1c", sans-serif;
     color: #696c6d;
   }
 }/*# sourceMappingURL=main.css.map */

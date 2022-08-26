@@ -56,11 +56,20 @@ header {
 }
 
 .about {
-  @include media_query.bp(sm_screens) {
+  @include media_query.bp(xsmall) {
     @include sections.orangeHeavyTextSection;
   }
 
-  @include media_query.bp(wide_screens) {
+  @include media_query.bp(xsmall) {
     @include sections.blueHeavyTextSection;
+  }
+  @include media_query.bp(medium) {
+    @include sections.blueHeavyTextSection;
+  }
+  @include media_query.bp(large) {
+    @include sections.brightGreenSection;
+  }
+  @include media_query.bp(xlarge) {
+    @include sections.brightYellowSection;
   }
 }
